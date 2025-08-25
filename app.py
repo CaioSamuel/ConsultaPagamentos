@@ -36,7 +36,7 @@ for linha in pagina_clientes.iter_rows(min_row=2,values_only=True):
 
         planilha_fechamento = openpyxl.load_workbook('planilha fechamento.xlsx')
         pagina_fechamento = planilha_fechamento['Sheet1']
-
+ 
         pagina_fechamento.append([nome, valor, cpf, vencimento, 'em dia', data_pagamento_limpo, metodo_pagamento_limpo])
 
         planilha_fechamento.save('planilha fechamento.xlsx')
